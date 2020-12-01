@@ -9,43 +9,43 @@ local function typeof(cmp, arg)
 end
 
 local function typeof_nil(...)
-    return typeof('nil', ...)
+    return typeof("nil", ...)
 end
 
 local function typeof_bool(...)
-    return typeof('boolean', ...)
+    return typeof("boolean", ...)
 end
 
 local function typeof_str(...)
-    return typeof('string', ...)
+    return typeof("string", ...)
 end
 
 local function typeof_num(...)
-    return typeof('number', ...)
+    return typeof("number", ...)
 end
 
 local function typeof_fun(...)
-    return typeof('function', ...)
+    return typeof("function", ...)
 end
 
 local function typeof_table(...)
-    return typeof('table', ...)
+    return typeof("table", ...)
 end
 
 local function typeof_thread(...)
-    return typeof('thread', ...)
+    return typeof("thread", ...)
 end
 
 local function typeof_userdata(...)
-    return typeof('userdata', ...)
+    return typeof("userdata", ...)
 end
 
 local function typeof_finite(arg)
-    return type(arg) == 'number' and (arg < INFINITE_POS and arg > INFINITE_NEG)
+    return type(arg) == "number" and (arg < INFINITE_POS and arg > INFINITE_NEG)
 end
 
 local function typeof_unsigned(arg)
-    return type(arg) == 'number' and (arg < INFINITE_POS and arg >= 0)
+    return type(arg) == "number" and (arg < INFINITE_POS and arg >= 0)
 end
 
 local function typeof_int(arg)
@@ -85,35 +85,34 @@ local function typeof_nan(arg)
 end
 
 local function typeof_non(arg)
-    return arg == nil or arg == false or arg == 0 or arg == '' or arg ~= arg
+    return arg == nil or arg == false or arg == 0 or arg == "" or arg ~= arg
 end
-
 
 local _M = {
     version = 0.1,
-    ['nil'] = typeof_nil,
-    ['boolean'] = typeof_bool,
-    ['string'] = typeof_str,
-    ['number'] = typeof_num,
-    ['function'] = typeof_fun,
-    ['table'] = typeof_table,
-    ['thread'] = typeof_thread,
-    ['userdata'] = typeof_userdata,
-    ['finite'] = typeof_finite,
-    ['unsigned'] = typeof_unsigned,
-    ['int'] = typeof_int,
-    ['int8'] = typeof_int8,
-    ['int16'] = typeof_int16,
-    ['int32'] = typeof_int32,
-    ['uint'] = typeof_uint,
-    ['uint8'] = typeof_uint8,
-    ['uint16'] = typeof_uint16,
-    ['uint32'] = typeof_uint32,
-    ['nan'] = typeof_nan,
-    ['non'] = typeof_non,
+    ["nil"] = typeof_nil,
+    ["boolean"] = typeof_bool,
+    ["string"] = typeof_str,
+    ["number"] = typeof_num,
+    ["function"] = typeof_fun,
+    ["table"] = typeof_table,
+    ["thread"] = typeof_thread,
+    ["userdata"] = typeof_userdata,
+    ["finite"] = typeof_finite,
+    ["unsigned"] = typeof_unsigned,
+    ["int"] = typeof_int,
+    ["int8"] = typeof_int8,
+    ["int16"] = typeof_int16,
+    ["int32"] = typeof_int32,
+    ["uint"] = typeof_uint,
+    ["uint8"] = typeof_uint8,
+    ["uint16"] = typeof_uint16,
+    ["uint32"] = typeof_uint32,
+    ["nan"] = typeof_nan,
+    ["non"] = typeof_non,
     -- alias
-    ['Nil'] = typeof_nil,
-    ['Function'] = typeof_fun
+    ["Nil"] = typeof_nil,
+    ["Function"] = typeof_fun
 }
 
 return _M
