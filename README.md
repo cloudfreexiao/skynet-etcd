@@ -1,3 +1,5 @@
+fork from https://github.com/api7/lua-resty-etcd
+
 API V3
 ======
     https://doczhcn.gitbook.io/etcd/index/index/interacting_v3
